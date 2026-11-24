@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato para saber mais sobre Desenvolvimento de Sistemas.">
+    <title>Contato | DS IFPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <div class="container navegacao">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icone">&lt;/&gt;</span>
+                <span>
+                    <strong>DS | IFPA</strong>
+                    <small>Desenvolvimento de Sistemas</small>
+                </span>
+            </a>
+
+            <nav class="menu">
+                <a href="index.html">Início</a>
+                <a href="index.html#aprendizado">O que você aprende</a>
+                <a href="index.html#sobre">Sobre o curso</a>
+                <a href="contato.html" class="ativo">Contato</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <main>
+
+        <!-- BANNER DE CONTATO -->
+        <section class="banner banner-contato">
+            <div class="container banner-conteudo">
+                <span class="etiqueta">DS | IFPA CAMPUS BELÉM</span>
+                <h1>Entre em <span>contato.</span></h1>
+                <p>
+                    Quer conhecer melhor o curso de Desenvolvimento
+                    de Sistemas? Envie sua mensagem!
+                </p>
+            </div>
+        </section>
+
+        <!-- ÁREA DE CONTATO -->
+        <section class="contato container">
+
+            <aside class="contato-info">
+                <div class="envelope">&lt;/&gt;</div>
+
+                <h2>Vamos conversar?</h2>
+
+                <p>
+                    Preencha o formulário ao lado para deixar sua dúvida,
+                    sugestão ou mensagem sobre o curso.
+                </p>
+
+                <div class="informacao">
+                    <span class="informacao-icone">⌂</span>
+                    <div>
+                        <strong>Instituição</strong>
+                        <p>IFPA — Campus Belém</p>
+                    </div>
+                </div>
+
+                <div class="informacao">
+                    <span class="informacao-icone">⌖</span>
+                    <div>
+                        <strong>Localização</strong>
+                        <p>Belém — Pará</p>
+                    </div>
+                </div>
+
+                <div class="informacao">
+                    <span class="informacao-icone">@</span>
+                    <div>
+                        <strong>Assunto</strong>
+                        <p>Curso de Desenvolvimento de Sistemas</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- FORMULÁRIO -->
+            <form class="formulario" id="formulario">
+
+                <h2>Envie sua mensagem</h2>
+                <p class="subtitulo-formulario">
+                    Os campos marcados com * são obrigatórios.
+                </p>
+
+                <label for="nome">Nome completo *</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                    required
+                >
+
+                <label for="email">E-mail *</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+
+                <label for="mensagem">Mensagem *</label>
+                <textarea
+                    id="mensagem"
+                    name="mensagem"
+                    placeholder="Escreva sua mensagem..."
+                    rows="6"
+                    required
+                ></textarea>
+
+                <button type="submit" class="botao botao-enviar">
+                    Enviar mensagem →
+                </button>
+
+                <p class="aviso-formulario" id="aviso">
+                    * Este formulário é uma demonstração acadêmica.
+                </p>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+
+            <div class="logo logo-rodape">
+                <span class="logo-icone">&lt;/&gt;</span>
+                <span>
+                    <strong>DS | IFPA</strong>
+                    <small>Desenvolvimento de Sistemas</small>
+                </span>
+            </div>
+
+            <p>IFPA — Campus Belém</p>
+            <p>Projeto de divulgação do curso de Desenvolvimento de Sistemas.</p>
+
+        </div>
+    </footer>
+
+    <script>
+        const formulario = document.getElementById("formulario");
+        const aviso = document.getElementById("aviso");
+
+        formulario.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            aviso.textContent =
+                "Mensagem demonstrativa enviada com sucesso!";
+
+            aviso.classList.add("aviso-sucesso");
+
+            formulario.reset();
+        });
+    </script>
+
+</body>
+</html>

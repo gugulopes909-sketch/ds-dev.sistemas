@@ -1,0 +1,540 @@
+    
+/* =================================
+   CONFIGURAÇÕES GERAIS
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #17243c;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* =================================
+   CABEÇALHO E MENU
+================================= */
+
+.cabecalho {
+    background-color: #061d3b;
+    color: white;
+    border-bottom: 1px solid #24466f;
+}
+
+.navegacao {
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+}
+
+.logo-icone {
+    color: #1688ff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.logo strong {
+    display: block;
+    font-size: 21px;
+    line-height: 1.2;
+}
+
+.logo small {
+    display: block;
+    color: #c4d5e9;
+    font-size: 11px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.menu a {
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background-color: #0878ed;
+}
+
+/* =================================
+   BANNER PRINCIPAL
+================================= */
+
+.banner {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(3, 22, 48, 0.96),
+        rgba(3, 35, 75, 0.78), rgba(3, 35, 75, 0.25)),
+        url("./imagens/pexels-markusspiske-4439901.jpg") center/cover no-repeat;
+}
+
+.banner-conteudo {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.etiqueta {
+    display: inline-block;
+    color: #1688ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.banner h1 {
+    max-width: 650px;
+    font-size: clamp(35px, 5vw, 54px);
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.banner h1 span {
+    color: #36a0ff;
+}
+
+.banner p {
+    max-width: 560px;
+    color: #e0eaf6;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #0878ed;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 9px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #005bc0;
+    transform: translateY(-2px);
+}
+
+/* =================================
+   SEÇÃO DE APRENDIZADO
+================================= */
+
+.secao {
+    padding-top: 65px;
+    padding-bottom: 65px;
+}
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.titulo-secao h2,
+.sobre h2 {
+    font-size: 32px;
+    color: #08264d;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.titulo-secao p {
+    color: #64748b;
+}
+
+.cartoes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.cartao {
+    padding: 25px;
+    border: 1px solid #e1e8f0;
+    border-radius: 14px;
+    box-shadow: 0 5px 18px rgba(8, 38, 77, 0.06);
+    transition: 0.3s;
+}
+
+.cartao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(8, 38, 77, 0.12);
+}
+
+.cartao-icone {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}
+
+.azul {
+    background-color: #dceeff;
+    color: #0759b5;
+}
+
+.verde {
+    background-color: #dcf8e9;
+    color: #13834b;
+}
+
+.roxo {
+    background-color: #eee4ff;
+    color: #7135bd;
+}
+
+.cartao h3 {
+    color: #08264d;
+    margin-bottom: 8px;
+}
+
+.cartao p {
+    color: #64748b;
+    font-size: 14px;
+}
+
+/* =================================
+   SOBRE O CURSO
+================================= */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding-top: 30px;
+    padding-bottom: 75px;
+}
+
+.sobre-texto p {
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.botao-contorno {
+    margin-top: 12px;
+    background-color: white;
+    color: #0759b5;
+    border: 1px solid #0878ed;
+}
+
+.botao-contorno:hover {
+    background-color: #0878ed;
+    color: white;
+}
+
+/* =================================
+   CHAMADA FINAL
+================================= */
+
+.chamada {
+    background: linear-gradient(120deg, #06234a, #0759b5);
+    color: white;
+    text-align: center;
+    padding: 55px 20px;
+}
+
+.chamada h2 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.chamada p {
+    color: #dceaff;
+    margin-bottom: 22px;
+}
+
+.botao-claro {
+    background-color: white;
+    color: #0759b5;
+}
+
+.botao-claro:hover {
+    background-color: #e8f2ff;
+}
+
+/* =================================
+   PÁGINA DE CONTATO
+================================= */
+
+.banner-contato {
+    min-height: 230px;
+}
+
+.contato {
+    display: grid;
+    grid-template-columns: 0.8fr 1.4fr;
+    gap: 25px;
+    padding-top: 45px;
+    padding-bottom: 65px;
+}
+
+.contato-info {
+    background-color: #e8f3ff;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.envelope {
+    width: 65px;
+    height: 65px;
+    background-color: #0878ed;
+    color: white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.contato-info h2 {
+    color: #08264d;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.contato-info > p {
+    color: #52657d;
+    margin-bottom: 25px;
+}
+
+.informacao {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 17px;
+}
+
+.informacao-icone {
+    width: 40px;
+    height: 40px;
+    background-color: #cce5ff;
+    color: #0759b5;
+    border-radius: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.informacao strong {
+    color: #08264d;
+    font-size: 14px;
+}
+
+.informacao p {
+    color: #52657d;
+    font-size: 13px;
+}
+
+/* =================================
+   FORMULÁRIO
+================================= */
+
+.formulario {
+    padding: 30px;
+    border: 1px solid #dce4ee;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(8, 38, 77, 0.06);
+}
+
+.formulario h2 {
+    color: #08264d;
+    font-size: 25px;
+    margin-bottom: 3px;
+}
+
+.subtitulo-formulario {
+    color: #718096;
+    font-size: 13px;
+    margin-bottom: 22px;
+}
+
+.formulario label {
+    display: block;
+    color: #17345b;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 18px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    outline: none;
+    font-family: inherit;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border-color: #0878ed;
+    box-shadow: 0 0 0 3px rgba(8, 120, 237, 0.12);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.botao-enviar {
+    width: 100%;
+    font-size: 15px;
+}
+
+.aviso-formulario {
+    color: #718096;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.aviso-sucesso {
+    color: #13834b;
+    font-weight: bold;
+}
+
+/* =================================
+   RODAPÉ
+================================= */
+
+.rodape {
+    background-color: #061d3b;
+    color: white;
+    padding: 25px 0;
+}
+
+.rodape-conteudo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.rodape p {
+    color: #c4d5e9;
+    font-size: 12px;
+}
+
+/* =================================
+   RESPONSIVIDADE
+================================= */
+
+@media (max-width: 800px) {
+
+    .navegacao {
+        flex-direction: column;
+        padding-top: 18px;
+        padding-bottom: 18px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+    .contato {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-conteudo {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .menu {
+        gap: 3px;
+    }
+
+    .menu a {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .cartoes {
+        grid-template-columns: 1fr;
+    }
+
+    .banner {
+        min-height: 350px;
+    }
+
+    .titulo-secao h2,
+    .sobre h2 {
+        font-size: 27px;
+    }
+
+    .formulario,
+    .contato-info {
+        padding: 22px;
+    }
+}
